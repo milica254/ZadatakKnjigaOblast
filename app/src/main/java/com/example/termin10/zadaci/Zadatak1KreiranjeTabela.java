@@ -9,12 +9,12 @@ import com.j256.ormlite.table.TableUtils;
 public class Zadatak1KreiranjeTabela {
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
             try {
                 ConnectionSource connectionSource = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
-                TableUtils.dropTable ( connectionSource,  Knjiga.class, true );
                 TableUtils.dropTable ( connectionSource,  Oblast.class, true );
+                TableUtils.dropTable ( connectionSource,  Knjiga.class, true );
 
 
                 TableUtils.createTable ( connectionSource , Knjiga.class );

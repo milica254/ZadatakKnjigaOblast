@@ -16,10 +16,10 @@ public class Zadatak2DodavanjeVrednosti {
     public static Dao<Knjiga, Integer> knjigaDao = null;
     public static Dao<Oblast, Integer> oblastDao = null;
 
+    public static void main(String[] args) {
+        ConnectionSource connectionSource;
 
-    ConnectionSource connectionSource;
 
-    {
         try {
             connectionSource = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
             knjigaDao = DaoManager.createDao(connectionSource, Knjiga.class);
@@ -35,18 +35,23 @@ public class Zadatak2DodavanjeVrednosti {
             knjigaDao.create(androidProgramiranje);
 
             Oblast uvod = new Oblast("Uvod", 2);
+            uvod.setKnjiga(javaProgramiranje);
             oblastDao.create(uvod);
 
             Oblast naredbe = new Oblast("Naredbe", 10);
+            naredbe.setKnjiga(javaProgramiranje);
             oblastDao.create(naredbe);
 
             Oblast aritmetickiOperatori = new Oblast("Aritmeticki operatori", 20);
+            aritmetickiOperatori.setKnjiga(javaProgramiranje);
             oblastDao.create(aritmetickiOperatori);
 
             Oblast androidOperativniSistem = new Oblast("Android operativni sistem", 2);
+            androidOperativniSistem.setKnjiga(androidProgramiranje);
             oblastDao.create(androidOperativniSistem);
 
             Oblast activityKlasa = new Oblast("Activity klasa", 30);
+            activityKlasa.setKnjiga(androidProgramiranje);
             oblastDao.create(activityKlasa);
 
 
