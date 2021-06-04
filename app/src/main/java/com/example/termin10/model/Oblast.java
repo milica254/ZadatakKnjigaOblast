@@ -47,10 +47,6 @@ public class Oblast {
         return knjiga;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }

@@ -55,10 +55,6 @@ public class Knjiga {
         return datumIzdanja;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setNaslov(String naslov) {
         this.naslov = naslov;
     }
