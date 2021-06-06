@@ -54,9 +54,10 @@ public class Zadatak2DodavanjeVrednosti {
             activityKlasa.setKnjiga(androidProgramiranje);
             oblastDao.create(activityKlasa);
 
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            connectionSource.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Desila se nepredvidjena greska.");
         }
     }
 
